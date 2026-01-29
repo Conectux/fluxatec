@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const products = [
-  'Compresores de tornillo rotativo (3 HP a 650 HP)',
-  'Compresores libres de aceite',
-  'Compresores de alta presión',
-  'Compresores portátiles (Mobilair)',
-  'Tratamiento de aire comprimido (secadores y filtros)',
-  'Tanques de almacenamiento',
-  'Bombas de vacío y sopladores',
-  'Tubería para aire comprimido (20 mm a 200 mm)',
-  'Equipos usados certificados',
+  "Compresores de tornillo rotativo (3 HP a 650 HP)",
+  "Compresores libres de aceite",
+  "Compresores de alta presión",
+  "Compresores portátiles (Mobilair)",
+  "Tratamiento de aire comprimido (secadores y filtros)",
+  "Tanques de almacenamiento",
+  "Bombas de vacío y sopladores",
+  "Tubería para aire comprimido (20 mm a 200 mm)",
+  "Equipos usados certificados",
 ];
 </script>
 
@@ -18,15 +18,30 @@ const products = [
       <div class="section-title">
         <h2>Portafolio KAESER</h2>
         <p class="section-subtitle">
-          Ofrecemos el portafolio completo de KAESER Compresores, líder mundial en sistemas de aire comprimido
+          Ofrecemos el portafolio completo de KAESER Compresores, líder mundial
+          en sistemas de aire comprimido
         </p>
       </div>
       <div class="products-content">
         <div class="products-list">
           <ul>
-            <li v-for="(product, index) in products" :key="index" class="product-item">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            <li
+              v-for="(product, index) in products"
+              :key="index"
+              class="product-item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               <span>{{ product }}</span>
             </li>
@@ -34,12 +49,30 @@ const products = [
         </div>
         <div class="products-cta">
           <div class="cta-card">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
             </svg>
             <h3>Catálogo completo</h3>
-            <p>Descarga nuestro catálogo de aire comprimido con especificaciones técnicas detalladas</p>
-            <a href="#contacto" class="btn btn-accent">Descargar catálogo</a>
+            <p class="">
+              Solicita nuestro catálogo de aire comprimido con especificaciones
+              técnicas detalladas vía WhatsApp
+            </p>
+            <a
+              href="#contacto"
+              rel="noopener noreferrer"
+              class="boton-whatsapp btn btn-accent"
+              >Solicitar catálogo</a
+            >
           </div>
         </div>
       </div>
@@ -49,7 +82,15 @@ const products = [
 
 <style scoped>
 .products {
-  background: linear-gradient(to bottom, var(--neutral-light) 0%, var(--white) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--neutral-light) 0%,
+    var(--white) 100%
+  );
+}
+
+.boton-whatsapp {
+  background: green;
 }
 
 .section-subtitle {
@@ -111,7 +152,7 @@ const products = [
 }
 
 .cta-card {
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+  background: linear-gradient(135deg, #c99700 0%, #ffd84d 100%);
   border-radius: 16px;
   padding: 40px 32px;
   text-align: center;

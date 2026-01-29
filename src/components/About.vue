@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section id="nosotros" class="section about">
@@ -9,24 +8,60 @@
       </div>
       <div class="about-content">
         <div class="about-text">
+          <div class="about-logo-fluxa">
+            <img
+              src="../assets/logo-fluxatec-negro.png"
+              style="
+                max-width: 300px;
+                width: 100%;
+                height: auto;
+                margin-bottom: 50px;
+              "
+              alt="Logo"
+            />
+          </div>
           <p class="about-intro">
-            Fluxatec Ingeniería es una empresa colombiana especializada en consultoría técnica, diseño e implementación de soluciones en aire comprimido y sistemas neumáticos.
+            Una empresa colombiana especializada en consultoría técnica, diseño
+            e implementación de soluciones en aire comprimido y sistemas
+            neumáticos.
           </p>
           <p>
-            Somos ingenieros especialistas y <strong>distribuidores autorizados de KAESER Compresores de Colombia</strong>, una de las marcas más reconocidas a nivel mundial en sistemas de aire comprimido.
+            Somos ingenieros especialistas y
+            <strong
+              >distribuidores autorizados de KAESER Compresores de
+              Colombia</strong
+            >, una de las marcas más reconocidas a nivel mundial en sistemas de
+            aire comprimido.
           </p>
           <p>
-            Cada proyecto se desarrolla bajo consultoría especializada, con enfoque en eficiencia energética, confiabilidad operativa y retorno de inversión para nuestros clientes.
+            Cada proyecto se desarrolla bajo consultoría especializada, con
+            enfoque en eficiencia energética, confiabilidad operativa y retorno
+            de inversión para nuestros clientes.
           </p>
         </div>
         <div class="about-logo">
-          <div class="logo-placeholder">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <img
+            src="../assets/distribuidor.png"
+            style="max-width: 500px; width: 100%; height: auto"
+            alt="Logo"
+          />
+          <!-- <div class="logo-placeholder">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              />
             </svg>
             <span>KAESER</span>
             <span class="authorized">Distribuidor Autorizado</span>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -61,7 +96,7 @@
 }
 
 .about-text strong {
-  color: var(--primary-blue);
+  color: #000;
   font-weight: 600;
 }
 
@@ -71,11 +106,16 @@
   align-items: center;
 }
 
+.about-logo-fluxa {
+  display: flex;
+  align-items: center;
+}
+
 .logo-placeholder {
   width: 100%;
   max-width: 320px;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+  background: linear-gradient(135deg, #c99700 0%, #ffd84d 100%);
   border-radius: 16px;
   display: flex;
   flex-direction: column;

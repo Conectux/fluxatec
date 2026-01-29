@@ -1,20 +1,27 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <h1 class="hero-title">Ingeniería experta en aire comprimido y sistemas neumáticos</h1>
+      <h1 class="hero-title">
+        Ingeniería experta en aire comprimido y sistemas neumáticos
+      </h1>
       <p class="hero-subtitle">
-        Soluciones integrales en aire comprimido con respaldo KAESER, consultoría especializada y servicio técnico de alto nivel.
+        Soluciones integrales en aire comprimido con respaldo KAESER,
+        consultoría especializada y servicio técnico de alto nivel.
       </p>
       <p class="hero-text">
-        En Fluxatec ayudamos a las industrias a optimizar sus procesos productivos mediante la selección, implementación y mantenimiento de sistemas de aire comprimido eficientes, confiables y diseñados a la medida.
+        En Fluxatec ayudamos a las industrias a optimizar sus procesos
+        productivos mediante la selección, implementación y mantenimiento de
+        sistemas de aire comprimido eficientes, confiables y diseñados a la
+        medida.
       </p>
       <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-primary">Solicita asesoría técnica</a>
-        <a href="#productos" class="btn btn-secondary">Ver portafolio de soluciones</a>
+        <a href="#contacto" class="btn btn-black">Solicita asesoría técnica</a>
+        <a href="#productos" class="btn btn-secondary"
+          >Ver portafolio de soluciones</a
+        >
       </div>
     </div>
   </section>
@@ -27,21 +34,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 50%, var(--primary-light) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary-blue) 50%,
+    var(--primary-light) 100%
+  );
   color: var(--white);
   overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(247, 127, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(252, 191, 73, 0.1) 0%, transparent 50%);
+    /* Amarillo fuerte (arriba/izq) */
+    radial-gradient(
+      circle at 25% 35%,
+      rgb(228, 197, 0) 0%,
+      rgba(122, 106, 0, 0.95) 35%,
+      rgba(0, 0, 0, 0) 60%
+    ),
+    /* Negro fuerte (abajo/der) */
+    radial-gradient(
+        circle at 80% 75%,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.9) 35%,
+        rgba(0, 0, 0, 0) 62%
+      ),
+    /* Corte marcado amarillo -> negro (sin tonos intermedios raros) */
+    linear-gradient(
+        135deg,
+        rgb(255, 236, 111) 0%,
+        rgb(255, 246, 188) 48%,
+        rgb(0, 0, 0) 52%,
+        rgba(0, 0, 0, 1) 100%
+      );
+
   pointer-events: none;
+}
+
+.about-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .hero-content {
@@ -145,5 +182,10 @@
   .hero-subtitle {
     font-size: 1.125rem;
   }
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
 }
 </style>

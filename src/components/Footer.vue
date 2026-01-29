@@ -3,20 +3,20 @@ const currentYear = new Date().getFullYear();
 
 const footerLinks = {
   company: [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Quiénes Somos', href: '#nosotros' },
-    { name: 'Propuesta de Valor', href: '#propuesta-valor' },
-    { name: 'Productos', href: '#productos' },
+    { name: "Inicio", href: "#inicio" },
+    { name: "Quiénes Somos", href: "#nosotros" },
+    { name: "Propuesta de Valor", href: "#propuesta-valor" },
+    { name: "Productos", href: "#productos" },
   ],
   services: [
-    { name: 'Servicio Técnico', href: '#servicios' },
-    { name: 'Análisis de Demanda', href: '#servicios' },
-    { name: 'Detección de Fugas', href: '#servicios' },
-    { name: 'Redes de Aire Comprimido', href: '#servicios' },
+    { name: "Servicio Técnico", href: "#servicios" },
+    { name: "Análisis de Demanda", href: "#servicios" },
+    { name: "Detección de Fugas", href: "#servicios" },
+    { name: "Redes de Aire Comprimido", href: "#servicios" },
   ],
   legal: [
-    { name: 'Política de privacidad', href: '#privacidad' },
-    { name: 'Términos y condiciones', href: '#terminos' },
+    { name: "Política de privacidad", href: "#privacidad" },
+    { name: "Términos y condiciones", href: "#terminos" },
   ],
 };
 </script>
@@ -27,17 +27,29 @@ const footerLinks = {
       <div class="footer-content">
         <div class="footer-brand">
           <div class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span>FLUXATEC</span>
+            <img
+              src="../assets/logo-fluxatec-simply.png"
+              style="max-width: 280px; width: 100%; height: auto"
+              alt="Logo"
+            />
           </div>
           <p class="brand-description">
-            Ingeniería especializada en aire comprimido y sistemas neumáticos. Distribuidores autorizados KAESER.
+            Ingeniería especializada en aire comprimido y sistemas neumáticos.
+            Distribuidores autorizados KAESER.
           </p>
           <div class="brand-location">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
             </svg>
             <span>Envigado, Colombia</span>
           </div>
@@ -69,10 +81,17 @@ const footerLinks = {
                 <a href="tel:+573242108469">324 210 8469</a>
               </li>
               <li>
-                <a href="mailto:asistente@fluxatec.com">asistente@fluxatec.com</a>
+                <a href="mailto:asistente@fluxatec.com"
+                  >asistente@fluxatec.com</a
+                >
               </li>
               <li>
-                <a href="https://www.fluxatec.com" target="_blank" rel="noopener noreferrer">www.fluxatec.com</a>
+                <a
+                  href="https://www.fluxatec.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >www.fluxatec.com</a
+                >
               </li>
             </ul>
           </div>
@@ -81,9 +100,17 @@ const footerLinks = {
 
       <div class="footer-bottom">
         <div class="footer-legal">
-          <p class="copyright">© {{ currentYear }} Fluxatec Ingeniería. Todos los derechos reservados.</p>
+          <p class="copyright">
+            © {{ currentYear }} Fluxatec Ingeniería. Todos los derechos
+            reservados.
+          </p>
           <div class="legal-links">
-            <a v-for="link in footerLinks.legal" :key="link.name" :href="link.href">{{ link.name }}</a>
+            <a
+              v-for="link in footerLinks.legal"
+              :key="link.name"
+              :href="link.href"
+              >{{ link.name }}</a
+            >
           </div>
         </div>
         <div class="footer-credits">
