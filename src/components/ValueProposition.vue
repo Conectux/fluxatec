@@ -75,6 +75,7 @@ const values = [
 
 .section-title {
   display: flex;
+  flex-wrap: wrap;
   text-align: left;
   height: auto;
   justify-content: center;
@@ -86,6 +87,7 @@ const values = [
   color: var(--text-light);
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .values-grid {
