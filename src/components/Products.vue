@@ -1,15 +1,27 @@
 <script setup lang="ts">
 const products = [
-  "Compresores de tornillo rotativo (3 HP a 650 HP)",
-  "Compresores libres de aceite",
-  "Compresores de alta presión",
-  "Compresores portátiles (Mobilair)",
-  "Tratamiento de aire comprimido (secadores y filtros)",
-  "Tanques de almacenamiento",
-  "Bombas de vacío y sopladores",
-  "Tubería para aire comprimido (20 mm a 200 mm)",
-  "Equipos usados certificados",
+  { text: "Compresores de tornillo rotativo (3 HP a 650 HP)", image: product1 },
+  { text: "Compresores libres de aceite", image: product2 },
+  { text: "Compresores de alta presión", image: product3 },
+  { text: "Compresores portátiles (Mobilair)", image: product4 },
+  {
+    text: "Tratamiento de aire comprimido (secadores y filtros)",
+    image: product5,
+  },
+  { text: "Tanques de almacenamiento", image: product6 },
+  { text: "Bombas de vacío y sopladores", image: product7 },
+  { text: "Tubería para aire comprimido (20 mm a 200 mm)", image: product8 },
+  { text: "Equipos usados certificados", image: product9 },
 ];
+import product1 from "../assets/producto1.png";
+import product2 from "../assets/producto2.png";
+import product3 from "../assets/producto3.png";
+import product4 from "../assets/producto4.png";
+import product5 from "../assets/producto5.png";
+import product6 from "../assets/producto6.png";
+import product7 from "../assets/producto7.png";
+import product8 from "../assets/producto8.png";
+import product9 from "../assets/producto9.png";
 </script>
 
 <template>
@@ -30,20 +42,31 @@ const products = [
               :key="index"
               class="product-item"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>{{ product }}</span>
+              <div class="product-container">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>{{ product.text }}</span>
+                </div>
+                <div>
+                  <img
+                    :src="product.image"
+                    style="max-width: 300px; width: 100%; height: auto"
+                    alt="Producto"
+                  />
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -81,6 +104,15 @@ const products = [
 </template>
 
 <style scoped>
+.product-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center !important;
+  text-align: center;
+}
+
 .products {
   background: linear-gradient(
     to bottom,

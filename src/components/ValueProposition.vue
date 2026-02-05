@@ -31,11 +31,18 @@ const values = [
   <section id="propuesta-valor" class="section value-proposition">
     <div class="container">
       <div class="section-title">
-        <h2>¿Por qué Fluxatec?</h2>
-        <p class="section-subtitle">
-          Nos diferenciamos por nuestra especialización técnica y compromiso con
-          la excelencia operativa
-        </p>
+        <div>
+          <h2>¿Por qué Fluxatec?</h2>
+          <p class="section-subtitle">
+            Nos diferenciamos por nuestra especialización técnica y compromiso
+            con la excelencia operativa
+          </p>
+        </div>
+        <img
+          src="../assets/tecnicos2.png"
+          style="max-width: 500px; width: 100%; height: auto"
+          alt="Logo"
+        />
       </div>
       <div class="values-grid">
         <div v-for="(value, index) in values" :key="index" class="value-card">
@@ -66,10 +73,18 @@ const values = [
   background-color: var(--white);
 }
 
+.section-title {
+  display: flex;
+  text-align: left;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .section-subtitle {
   font-size: 1.125rem;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
