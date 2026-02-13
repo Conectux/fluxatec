@@ -18,6 +18,9 @@ const professionals = [
   "Ingenieros",
   "Tecnólogos",
   "Técnicos",
+  "Gerentes",
+  "Compradores",
+  "Diseñadores de redes",
   "Personal administrativo y de mantenimiento",
 ];
 </script>
@@ -87,6 +90,9 @@ const professionals = [
               <span class="tag">Eficiencia energética</span>
               <span class="tag">Confiabilidad operativa</span>
               <span class="tag">Optimización de sistemas</span>
+              <span class="tag">Repuestos originales</span>
+              <span class="tag">Calidad del servicio</span>
+              <span class="tag">Ahorros de energía</span>
             </div>
           </div>
         </div>

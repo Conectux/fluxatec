@@ -5,7 +5,8 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <h1 class="hero-title">
-        Ingeniería experta en aire comprimido y sistemas neumáticos
+        Bienvenido a Fluxatec Ingeniería:
+        <!-- Ingeniería experta en aire comprimido y sistemas neumáticos -->
       </h1>
       <p class="hero-subtitle">
         Soluciones integrales en aire comprimido con respaldo KAESER,
@@ -18,9 +19,14 @@
         medida.
       </p>
       <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-black">Solicita asesoría técnica</a>
         <a href="#productos" class="btn btn-secondary"
-          >Ver portafolio de soluciones</a
+          >Portafolio de productos</a
+        >
+        <a href="#servicios" class="btn btn-secondary"
+          >Portafolio de servicios</a
+        >
+        <a href="#contacto" class="btn btn-secondary"
+          >Mantenimiento/repuestos</a
         >
       </div>
     </div>
@@ -29,6 +35,38 @@
 
 <style scoped>
 .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Imagen de fondo */
+  background-image: url("../assets/kadi.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    /* Negro fuerte */ rgba(0, 0, 0, 0.85) 45%,
+    rgba(250, 226, 15, 0.5) 70%,
+    /* Amarillo sutil */ rgba(250, 226, 15, 0.25) 100% /* Toque final */
+  );
+
+  pointer-events: none;
+}
+
+/* .hero {
   position: relative;
   min-height: 90vh;
   display: flex;
@@ -42,37 +80,34 @@
   );
   color: var(--white);
   overflow: hidden;
-}
+} */
 
-.hero-overlay {
+/* .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    /* Amarillo fuerte (arriba/izq) */
     radial-gradient(
       circle at 25% 35%,
       rgb(228, 197, 0) 0%,
       rgba(122, 106, 0, 0.95) 35%,
       rgba(0, 0, 0, 0) 60%
     ),
-    /* Negro fuerte (abajo/der) */
     radial-gradient(
-        circle at 80% 75%,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.9) 35%,
-        rgba(0, 0, 0, 0) 62%
-      ),
-    /* Corte marcado amarillo -> negro (sin tonos intermedios raros) */
+      circle at 80% 75%,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.9) 35%,
+      rgba(0, 0, 0, 0) 62%
+    ),
     linear-gradient(
-        135deg,
-        rgb(255, 236, 111) 0%,
-        rgb(255, 246, 188) 48%,
-        rgb(0, 0, 0) 52%,
-        rgba(0, 0, 0, 1) 100%
-      );
+      135deg,
+      rgb(255, 236, 111) 0%,
+      rgb(255, 246, 188) 48%,
+      rgb(0, 0, 0) 52%,
+      rgba(0, 0, 0, 1) 100%
+    );
 
   pointer-events: none;
-}
+} */
 
 .about-logo {
   display: flex;

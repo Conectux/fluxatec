@@ -34,8 +34,9 @@ const values = [
         <div>
           <h2>¿Por qué Fluxatec?</h2>
           <p class="section-subtitle">
-            Nos diferenciamos por nuestra especialización técnica y compromiso
-            con la excelencia operativa
+            Además de ser especialistas en aire comprimido y ser comprometidos
+            con el servicio técnico de alto nivel, respondemos con agilidad,
+            agregando valor a nuestros clientes.
           </p>
         </div>
         <img

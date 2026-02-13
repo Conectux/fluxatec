@@ -1,17 +1,33 @@
 <script setup lang="ts">
 const products = [
-  { text: "Compresores de tornillo rotativo (3 HP a 650 HP)", image: product1 },
+  {
+    text: "Compresores de tornillo rotativo (3 HP a 650 HP)",
+    image: product1,
+    image2: product11,
+  },
+  {
+    text: "Tubería en aluminio para aire comprimido ( 20 mm hasta 200 mm de diámetro)",
+    image: product8,
+  },
   { text: "Compresores libres de aceite", image: product2 },
   { text: "Compresores de alta presión", image: product3 },
-  { text: "Compresores portátiles (Mobilair)", image: product4 },
+  {
+    text: "Compresores portátiles (Mobilair)",
+    image: product4,
+    image2: product10,
+  },
   {
     text: "Tratamiento de aire comprimido (secadores y filtros)",
     image: product5,
   },
   { text: "Tanques de almacenamiento", image: product6 },
   { text: "Bombas de vacío y sopladores", image: product7 },
-  { text: "Tubería para aire comprimido (20 mm a 200 mm)", image: product8 },
-  { text: "Equipos usados certificados", image: product9 },
+
+  {
+    text: "Equipos usados certificados",
+    image: product9,
+    text2: "Si tienes un equipo usado marca Kaeser, te lo ayudamos a vender",
+  },
 ];
 import product1 from "../assets/producto1.png";
 import product2 from "../assets/producto2.png";
@@ -22,6 +38,8 @@ import product6 from "../assets/producto6.png";
 import product7 from "../assets/producto7.png";
 import product8 from "../assets/producto8.png";
 import product9 from "../assets/producto9.png";
+import product10 from "../assets/producto10.jpg";
+import product11 from "../assets/producto11.png";
 </script>
 
 <template>
@@ -66,6 +84,23 @@ import product9 from "../assets/producto9.png";
                     alt="Producto"
                   />
                 </div>
+                <div v-if="product.image2">
+                  <img
+                    :src="product.image2"
+                    style="max-width: 300px; width: 100%; height: auto"
+                    alt="Producto"
+                  />
+                </div>
+                <div v-if="product.text2">
+                  <span>{{ product.text2 }}</span>
+                  <a
+                    href="https://wa.me/573014879719"
+                    target="blank"
+                    rel="noopener noreferrer"
+                    class="boton-whatsapp btn btn-primary"
+                    >Vender equipo</a
+                  >
+                </div>
               </div>
             </li>
           </ul>
@@ -93,8 +128,15 @@ import product9 from "../assets/producto9.png";
             <a
               href="#contacto"
               rel="noopener noreferrer"
-              class="boton-whatsapp btn btn-accent"
-              >Solicitar catálogo</a
+              class="boton-whatsapp btn btn-primary"
+              >Solicitar catálogo o cotización</a
+            >
+            <a
+              href="https://docs.google.com/forms/d/10yTmnfaJWhcFZ_wCaH_pnm5fS_Gq3QMUwxMMEDwXuXE/edit"
+              target="blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              >Califica nuestro servicio</a
             >
           </div>
         </div>
@@ -104,6 +146,14 @@ import product9 from "../assets/producto9.png";
 </template>
 
 <style scoped>
+.products-cta .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--white);
+  color: var(--white);
+  backdrop-filter: blur(10px);
+  margin-top: 10px;
+}
+
 .product-container {
   width: 100%;
   display: flex;
@@ -184,11 +234,17 @@ import product9 from "../assets/producto9.png";
 }
 
 .cta-card {
-  background: linear-gradient(135deg, #c99700 0%, #ffd84d 100%);
+  background: linear-gradient(
+    135deg,
+    #fae20f 0%,
+    /* Amarillo principal */ #f5d400 55%,
+    /* Transición suave */ #c9a800 100% /* Dorado oscuro elegante */
+  );
+
   border-radius: 16px;
   padding: 40px 32px;
   text-align: center;
-  color: var(--white);
+  color: #000;
   box-shadow: 0 8px 24px rgba(11, 79, 140, 0.2);
 }
 
@@ -202,14 +258,14 @@ import product9 from "../assets/producto9.png";
 .cta-card h3 {
   font-size: 1.75rem;
   margin-bottom: 16px;
-  color: var(--white);
+  color: #000;
 }
 
 .cta-card p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 28px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
 }
 
 .cta-card .btn {
