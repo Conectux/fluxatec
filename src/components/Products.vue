@@ -93,13 +93,15 @@ import product11 from "../assets/producto11.png";
                 </div>
                 <div v-if="product.text2">
                   <span>{{ product.text2 }}</span>
-                  <a
-                    href="https://wa.me/573014879719"
-                    target="blank"
-                    rel="noopener noreferrer"
-                    class="boton-whatsapp btn btn-primary"
-                    >Vender equipo</a
-                  >
+                  <div style="margin-top: 20px">
+                    <a
+                      href="https://wa.me/573014879719"
+                      target="blank"
+                      rel="noopener noreferrer"
+                      class="boton-whatsapp btn btn-primary"
+                      >Vender equipo</a
+                    >
+                  </div>
                 </div>
               </div>
             </li>
