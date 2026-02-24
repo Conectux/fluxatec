@@ -57,10 +57,10 @@
 
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.9) 0%,
-    /* Negro fuerte */ rgba(0, 0, 0, 0.85) 45%,
+    rgba(250, 226, 15, 0.9) 0%,
+    rgba(250, 226, 15, 0.8) 45%,
     rgba(250, 226, 15, 0.5) 70%,
-    /* Amarillo sutil */ rgba(250, 226, 15, 0.25) 100% /* Toque final */
+    rgba(250, 226, 15, 0.25) 100%
   );
 
   pointer-events: none;
@@ -128,8 +128,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--white);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #000;
 }
 
 .hero-subtitle {
@@ -137,7 +136,7 @@
   font-weight: 500;
   line-height: 1.5;
   margin-bottom: 24px;
-  color: rgba(255, 255, 255, 0.95);
+  color: #000;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -147,7 +146,7 @@
   font-size: 1.125rem;
   line-height: 1.8;
   margin-bottom: 40px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #000;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -165,7 +164,7 @@
 }
 
 .hero .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #000;
   border-color: var(--white);
   color: var(--white);
   backdrop-filter: blur(10px);
