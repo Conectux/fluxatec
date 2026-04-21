@@ -3,7 +3,7 @@ const services = [
   {
     icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z',
     title: 'Servicio técnico especializado KAESER',
-    description: 'Prestamos servicio técnico bajo los estándares de KAESER Compresores, con un equipo que cuenta con más de 20 años de experiencia en sistemas de aire comprimido.',
+    description: 'Prestamos servicio técnico de compresores bajo los estándares de Kaeser Compresores, con técnicos certificados y más de 20 años de experiencia en sistemas de aire comprimido industrial en Medellín y Antioquia.',
     features: [
       'Diagnóstico especializado',
       'Mantenimiento preventivo y correctivo',
@@ -26,14 +26,14 @@ const services = [
   {
     icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
     title: 'Detección de fugas de aire comprimido',
-    description: 'Entre el 20 % y el 30 % del aire comprimido producido se pierde por fugas. En Fluxatec realizamos:',
+    description: 'Entre el 20 % y el 30 % del aire comprimido producido se pierde por fugas, elevando el consumo energético innecesariamente. En Fluxatec realizamos:',
     features: [
       'Detección con tecnología de punta',
       'Identificación precisa de fugas',
       'Marcación del desperdicio',
       'Apoyo en planes de corrección',
     ],
-    highlight: 'Resultado: menor consumo energético y mayor eficiencia operativa.',
+    highlight: 'Resultado: reducción del consumo energético y mayor eficiencia operativa en su planta industrial.',
   },
   {
     icon: 'M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z',
@@ -54,9 +54,10 @@ const services = [
   <section id="servicios" class="section services">
     <div class="container">
       <div class="section-title">
-        <h2>Servicios Especializados</h2>
+        <h2>Servicio Técnico y Mantenimiento de Compresores Kaeser</h2>
         <p class="section-subtitle">
-          Soluciones integrales para optimizar sus sistemas de aire comprimido
+          Soluciones especializadas en mantenimiento, detección de fugas y eficiencia
+          energética para sus sistemas de aire comprimido industrial en Colombia
         </p>
       </div>
       <div class="services-grid">

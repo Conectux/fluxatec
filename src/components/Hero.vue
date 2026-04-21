@@ -5,28 +5,28 @@
     <div class="hero-overlay"></div>
     <div class="container hero-content">
       <h1 class="hero-title">
-        Bienvenido a Fluxatec Ingeniería:
-        <!-- Ingeniería experta en aire comprimido y sistemas neumáticos -->
+        Distribuidores Autorizados Kaeser Compresores en Colombia
       </h1>
       <p class="hero-subtitle">
-        Soluciones integrales en aire comprimido con respaldo KAESER,
-        consultoría especializada y servicio técnico de alto nivel.
+        Ingeniería especializada en sistemas de aire comprimido industrial:
+        venta, mantenimiento, repuestos originales y servicio técnico con más de
+        20 años de experiencia.
       </p>
       <p class="hero-text">
-        En Fluxatec ayudamos a las industrias a optimizar sus procesos
-        productivos mediante la selección, implementación y mantenimiento de
-        sistemas de aire comprimido eficientes, confiables y diseñados a la
-        medida.
+        En Fluxatec ayudamos a las industrias de Medellín, Antioquia y Colombia
+        a optimizar sus sistemas de aire comprimido con equipos Kaeser,
+        consultoría técnica y acompañamiento integral desde el diseño hasta el
+        mantenimiento.
       </p>
       <div class="hero-ctas">
         <a href="#productos" class="btn btn-secondary"
-          >Portafolio de productos</a
+          >Portafolio Kaeser</a
         >
         <a href="#servicios" class="btn btn-secondary"
-          >Portafolio de servicios</a
+          >Servicio técnico y mantenimiento</a
         >
         <a href="#contacto" class="btn btn-secondary"
-          >Mantenimiento/repuestos</a
+          >Repuestos y cotizaciones</a
         >
       </div>
     </div>

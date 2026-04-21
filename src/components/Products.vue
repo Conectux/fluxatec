@@ -3,29 +3,51 @@ const products = [
   {
     text: "Compresores de tornillo rotativo (3 HP a 650 HP)",
     image: product1,
+    alt: "Compresor de tornillo rotativo Kaeser para aire comprimido industrial – desde 3 HP hasta 650 HP",
     image2: product11,
+    alt2: "Compresor Kaeser de tornillo rotativo de alta eficiencia energética para industria",
   },
   {
-    text: "Tubería en aluminio para aire comprimido ( 20 mm hasta 200 mm de diámetro)",
+    text: "Tubería en aluminio para aire comprimido (20 mm hasta 200 mm de diámetro)",
     image: product8,
+    alt: "Tubería en aluminio Kaeser para redes de aire comprimido industrial – 20 mm a 200 mm",
   },
-  { text: "Compresores libres de aceite", image: product2 },
-  { text: "Compresores de alta presión", image: product3 },
+  {
+    text: "Compresores libres de aceite",
+    image: product2,
+    alt: "Compresor Kaeser libre de aceite para aire comprimido de alta pureza en industria farmacéutica y alimentaria",
+  },
+  {
+    text: "Compresores de alta presión",
+    image: product3,
+    alt: "Compresor Kaeser de alta presión para procesos industriales con requerimientos especiales",
+  },
   {
     text: "Compresores portátiles (Mobilair)",
     image: product4,
+    alt: "Compresor portátil Kaeser Mobilair para obras civiles, minería y trabajo en campo",
     image2: product10,
+    alt2: "Kaeser Mobilair – compresor portátil compacto para industria y construcción",
   },
   {
     text: "Tratamiento de aire comprimido (secadores y filtros)",
     image: product5,
+    alt: "Secadores y filtros Kaeser para tratamiento y purificación de aire comprimido industrial",
   },
-  { text: "Tanques de almacenamiento", image: product6 },
-  { text: "Bombas de vacío y sopladores", image: product7 },
-
+  {
+    text: "Tanques de almacenamiento",
+    image: product6,
+    alt: "Tanques de almacenamiento para sistemas de aire comprimido industrial Kaeser",
+  },
+  {
+    text: "Bombas de vacío y sopladores",
+    image: product7,
+    alt: "Bombas de vacío y sopladores Kaeser para procesos industriales que requieren vacío o presión positiva",
+  },
   {
     text: "Equipos usados certificados",
     image: product9,
+    alt: "Compresores Kaeser usados certificados – equipos revisados y garantizados por Fluxatec",
     text2: "Si tienes un equipo usado marca Kaeser, te lo ayudamos a vender",
   },
 ];
@@ -46,10 +68,10 @@ import product11 from "../assets/producto11.png";
   <section id="productos" class="section products">
     <div class="container">
       <div class="section-title">
-        <h2>Portafolio KAESER</h2>
+        <h2>Portafolio de Compresores y Equipos Kaeser</h2>
         <p class="section-subtitle">
-          Ofrecemos el portafolio completo de KAESER Compresores, líder mundial
-          en sistemas de aire comprimido
+          Distribuidores autorizados del portafolio completo de Kaeser Compresores
+          en Colombia — líder mundial en sistemas de aire comprimido industrial
         </p>
       </div>
       <div class="products-content">
@@ -81,14 +103,14 @@ import product11 from "../assets/producto11.png";
                   <img
                     :src="product.image"
                     style="max-width: 300px; width: 100%; height: auto"
-                    alt="Producto"
+                    :alt="product.alt"
                   />
                 </div>
                 <div v-if="product.image2">
                   <img
                     :src="product.image2"
                     style="max-width: 300px; width: 100%; height: auto"
-                    alt="Producto"
+                    :alt="product.alt2"
                   />
                 </div>
                 <div v-if="product.text2">

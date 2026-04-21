@@ -29,10 +29,10 @@ const professionals = [
   <section id="publico" class="section target-audience">
     <div class="container">
       <div class="section-title">
-        <h2>¿A quién servimos?</h2>
+        <h2>Industrias y Profesionales que Atendemos</h2>
         <p class="section-subtitle">
-          Trabajamos con empresas y profesionales comprometidos con la
-          excelencia operativa
+          Trabajamos con empresas y profesionales de Medellín, Antioquia y Colombia
+          comprometidos con la eficiencia energética y la excelencia operativa
         </p>
       </div>
       <div class="audience-content">

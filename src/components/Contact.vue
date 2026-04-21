@@ -39,9 +39,9 @@ const contactInfo = [
   <section id="contacto" class="section contact">
     <div class="container">
       <div class="section-title">
-        <h2>Contáctanos</h2>
+        <h2>Contáctenos — Fluxatec Ingeniería</h2>
         <p class="section-subtitle">
-          ¿Necesitas asesoría técnica especializada? Hablemos.
+          ¿Necesita mantenimiento de compresores, repuestos Kaeser o asesoría técnica especializada? Hablemos.
         </p>
       </div>
       <div class="contact-grid">
@@ -85,8 +85,8 @@ const contactInfo = [
         </div>
       </div>
       <div class="cta-section">
-        <h3>¿Listo para optimizar sus sistemas de aire comprimido?</h3>
-        <p>Nuestro equipo de especialistas está disponible para asesorarlo</p>
+        <h3>¿Listo para optimizar sus sistemas de aire comprimido industrial?</h3>
+        <p>Nuestro equipo de ingenieros especialistas en Kaeser está disponible en Medellín y Antioquia</p>
         <a
           href="https://wa.me/573242108469"
           target="_blank"

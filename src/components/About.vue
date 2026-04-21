@@ -17,33 +17,34 @@
                 height: auto;
                 margin-bottom: 50px;
               "
-              alt="Logo"
+              alt="Fluxatec Ingeniería – especialistas en aire comprimido industrial Colombia"
             />
           </div>
           <p class="about-intro">
-            Una empresa colombiana especializada en consultoría técnica, diseño
-            e implementación de soluciones en aire comprimido y sistemas
-            neumáticos.
+            Empresa colombiana con sede en Envigado, Antioquia, especializada en
+            consultoría técnica, diseño e implementación de soluciones en aire
+            comprimido industrial y sistemas neumáticos.
           </p>
           <p>
             Somos ingenieros especialistas y
             <strong
-              >distribuidores autorizados de KAESER Compresores de
+              >distribuidores autorizados de Kaeser Compresores de
               Colombia</strong
-            >, una de las marcas más reconocidas a nivel mundial en sistemas de
-            aire comprimido.
+            >, marca líder mundial en sistemas de aire comprimido, con presencia
+            en Medellín, Antioquia y el resto del país.
           </p>
           <p>
-            Cada proyecto se desarrolla bajo consultoría especializada, con
-            enfoque en eficiencia energética, confiabilidad operativa y retorno
-            de inversión para nuestros clientes.
+            Cada proyecto se desarrolla con consultoría especializada, enfocada
+            en eficiencia energética, confiabilidad operativa y retorno de
+            inversión. Ofrecemos mantenimiento preventivo y correctivo,
+            repuestos Kaeser 100&nbsp;% originales y servicio técnico certificado.
           </p>
         </div>
         <div class="about-logo">
           <img
             src="../assets/distribuidor.png"
             style="max-width: 500px; width: 100%; height: auto"
-            alt="Logo"
+            alt="Fluxatec – distribuidor autorizado de Kaeser Compresores de Colombia"
           />
           <!-- <div class="logo-placeholder">
             <svg

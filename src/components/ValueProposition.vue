@@ -42,7 +42,7 @@ const values = [
         <img
           src="../assets/tecnicos2.png"
           style="max-width: 500px; width: 100%; height: auto"
-          alt="Logo"
+          alt="Técnicos especializados de Fluxatec realizando mantenimiento de compresores Kaeser en Colombia"
         />
       </div>
       <div class="values-grid">
