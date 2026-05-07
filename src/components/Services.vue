@@ -2,7 +2,7 @@
 const services = [
   {
     icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z',
-    title: 'Servicio técnico especializado KAESER',
+    title: 'Servicio técnico especializado Kaeser',
     description: 'Prestamos servicio técnico de compresores bajo los estándares de Kaeser Compresores, con técnicos certificados y más de 20 años de experiencia en sistemas de aire comprimido industrial en Medellín y Antioquia.',
     features: [
       'Diagnóstico especializado',
@@ -21,7 +21,7 @@ const services = [
       'Reducción de costos operativos',
       'Informe técnico detallado',
     ],
-    cta: 'Ver informe técnico',
+    cta: 'Solicitar análisis',
   },
   {
     icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z',
@@ -53,175 +53,260 @@ const services = [
 <template>
   <section id="servicios" class="section services">
     <div class="container">
-      <div class="section-title">
-        <h2>Servicio Técnico y Mantenimiento de Compresores Kaeser</h2>
-        <p class="section-subtitle">
+
+      <div class="services-header">
+        <span class="section-label">Nuestros Servicios</span>
+        <h2>Servicio Técnico y Mantenimiento<br />de Compresores Kaeser</h2>
+        <p class="services-subtitle">
           Soluciones especializadas en mantenimiento, detección de fugas y eficiencia
-          energética para sus sistemas de aire comprimido industrial en Colombia
+          energética para sus sistemas de aire comprimido industrial en Colombia.
         </p>
       </div>
+
       <div class="services-grid">
         <div v-for="(service, index) in services" :key="index" class="service-card">
-          <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="service.icon" />
-            </svg>
+          <div class="service-top">
+            <span class="service-number">{{ String(index + 1).padStart(2, '0') }}</span>
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="service.icon" />
+              </svg>
+            </div>
           </div>
           <h3 class="service-title">{{ service.title }}</h3>
           <p class="service-description">{{ service.description }}</p>
           <ul class="service-features">
             <li v-for="(feature, idx) in service.features" :key="idx">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+              <span class="feature-dot"></span>
               {{ feature }}
             </li>
           </ul>
           <p v-if="service.highlight" class="service-highlight">{{ service.highlight }}</p>
-          <a v-if="service.cta" href="#contacto" class="service-cta">{{ service.cta }} →</a>
+          <a v-if="service.cta" href="#contacto" class="service-cta">
+            {{ service.cta }}
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
+
     </div>
   </section>
 </template>
 
 <style scoped>
 .services {
-  background-color: var(--white);
+  background-color: var(--section-alt);
 }
 
-.section-subtitle {
-  font-size: 1.125rem;
+/* Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.services-subtitle {
+  font-size: 1.0625rem;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
+  line-height: 1.75;
 }
 
+/* Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
 }
 
+/* Card */
 .service-card {
-  background: var(--white);
-  border: 2px solid var(--neutral-light);
-  border-radius: 16px;
-  padding: 32px;
-  transition: all 0.3s ease;
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  border: 2px solid transparent;
+  transition: all 0.28s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #fecd01;
+  opacity: 0;
+  transition: opacity 0.28s ease;
 }
 
 .service-card:hover {
-  border-color: var(--primary-blue);
-  box-shadow: 0 12px 32px rgba(11, 79, 140, 0.15);
+  border-color: rgba(254, 205, 1, 0.4);
+  box-shadow: 0 16px 48px rgba(254, 205, 1, 0.12);
   transform: translateY(-4px);
 }
 
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Top row */
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.service-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fecd01;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
 .service-icon {
-  width: 64px;
-  height: 64px;
-  background: linear-gradient(135deg, var(--accent-orange), var(--accent-yellow));
+  width: 52px;
+  height: 52px;
+  background: #fecd01;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
-  color: var(--white);
+  color: #0a1628;
+  flex-shrink: 0;
 }
 
 .service-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
 }
 
 .service-title {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 16px;
-  line-height: 1.3;
+  margin-bottom: 14px;
+  line-height: 1.35;
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: var(--text-light);
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
+/* Features */
 .service-features {
   list-style: none;
   padding: 0;
   margin: 0 0 20px 0;
+  flex: 1;
 }
 
 .service-features li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  padding: 8px 0;
   font-size: 0.9375rem;
   color: var(--text-dark);
+  border-bottom: 1px solid var(--neutral-light);
+}
+
+.service-features li:last-child {
+  border-bottom: none;
+}
+
+.feature-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fecd01;
+  flex-shrink: 0;
+}
+
+/* Highlight */
+.service-highlight {
+  background: rgba(254, 205, 1, 0.1);
+  border-left: 3px solid #fecd01;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: auto;
+  margin-bottom: 16px;
   line-height: 1.5;
 }
 
-.service-features svg {
-  width: 20px;
-  height: 20px;
-  color: var(--primary-blue);
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.service-highlight {
-  background: var(--neutral-light);
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--primary-blue);
-  margin-top: auto;
-  margin-bottom: 16px;
-}
-
+/* CTA */
 .service-cta {
   display: inline-flex;
   align-items: center;
-  font-weight: 600;
-  color: var(--primary-blue);
+  gap: 8px;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--text-dark);
   margin-top: auto;
-  transition: all 0.3s ease;
-  font-size: 1rem;
+  background: #fecd01;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+  text-decoration: none;
+}
+
+.service-cta svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s ease;
 }
 
 .service-cta:hover {
-  color: var(--accent-orange);
+  background: #d4ac00;
+  color: #0a1628;
+  transform: translateX(2px);
+}
+
+.service-cta:hover svg {
   transform: translateX(4px);
 }
 
-@media (max-width: 768px) {
+/* Responsive */
+@media (max-width: 900px) {
   .services-grid {
     grid-template-columns: 1fr;
   }
 
+  .services-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .service-card {
-    padding: 24px;
+    padding: 28px 24px;
   }
 
-  .service-icon {
-    width: 56px;
-    height: 56px;
-  }
-
-  .service-icon svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .service-title {
-    font-size: 1.25rem;
+  .service-number {
+    font-size: 2.5rem;
   }
 }
 </style>

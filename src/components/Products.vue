@@ -68,10 +68,11 @@ import product11 from "../assets/producto11.png";
   <section id="productos" class="section products">
     <div class="container">
       <div class="section-title">
-        <h2>Portafolio de Compresores y Equipos Kaeser</h2>
+        <span class="section-label">Portafolio</span>
+        <h2>Compresores y Equipos Kaeser</h2>
         <p class="section-subtitle">
           Distribuidores autorizados del portafolio completo de Kaeser Compresores
-          en Colombia — líder mundial en sistemas de aire comprimido industrial
+          en Colombia — líder mundial en sistemas de aire comprimido industrial.
         </p>
       </div>
       <div class="products-content">
@@ -170,46 +171,34 @@ import product11 from "../assets/producto11.png";
 </template>
 
 <style scoped>
-.products-cta .btn-secondary {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: var(--white);
-  color: var(--white);
-  backdrop-filter: blur(10px);
-  margin-top: 10px;
-}
-
-.product-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center !important;
-  text-align: center;
-}
-
 .products {
-  background: linear-gradient(
-    to bottom,
-    var(--neutral-light) 0%,
-    var(--white) 100%
-  );
+  background-color: var(--white);
 }
 
-.boton-whatsapp {
-  background: green;
+.section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 14px;
 }
 
 .section-subtitle {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   color: var(--text-light);
-  max-width: 700px;
+  max-width: 620px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
 .products-content {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  gap: 64px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -220,80 +209,119 @@ import product11 from "../assets/producto11.png";
 }
 
 .product-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 16px;
-  margin-bottom: 12px;
-  background: var(--white);
-  border-radius: 8px;
-  border: 1px solid var(--neutral-light);
-  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  background: var(--section-alt);
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
 }
 
 .product-item:hover {
-  border-color: var(--primary-blue);
-  transform: translateX(8px);
-  box-shadow: 0 4px 12px rgba(11, 79, 140, 0.1);
+  border-color: #fecd01;
+  background: #fff;
+  transform: translateX(6px);
+  box-shadow: 0 6px 24px rgba(254, 205, 1, 0.15);
 }
 
-.product-item svg {
-  width: 24px;
-  height: 24px;
-  color: var(--accent-orange);
+.product-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 12px;
+}
+
+.product-container > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+}
+
+.product-container svg {
+  width: 22px;
+  height: 22px;
+  color: #fecd01;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
-.product-item span {
-  font-size: 1.125rem;
+.product-container span {
+  font-size: 1rem;
   color: var(--text-dark);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
 }
 
+.product-container img {
+  border-radius: 8px;
+  border: 1px solid var(--neutral-light);
+}
+
+.boton-whatsapp {
+  background: #25d366 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.boton-whatsapp:hover {
+  background: #1ea952 !important;
+}
+
+/* CTA sticky */
 .products-cta {
   position: sticky;
   top: 32px;
 }
 
 .cta-card {
-  background: linear-gradient(
-    135deg,
-    #fae20f 0%,
-    /* Amarillo principal */ #f5d400 55%,
-    /* Transición suave */ #c9a800 100% /* Dorado oscuro elegante */
-  );
-
-  border-radius: 16px;
+  background: var(--navy-dark);
+  border-radius: 20px;
   padding: 40px 32px;
   text-align: center;
-  color: #000;
-  box-shadow: 0 8px 24px rgba(11, 79, 140, 0.2);
+  border: 2px solid rgba(254, 205, 1, 0.2);
 }
 
 .cta-card svg {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
   margin-bottom: 20px;
-  opacity: 0.9;
+  color: #fecd01;
 }
 
 .cta-card h3 {
-  font-size: 1.75rem;
-  margin-bottom: 16px;
-  color: #000;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  color: #fff;
+  font-weight: 800;
 }
 
 .cta-card p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9375rem;
+  line-height: 1.65;
   margin-bottom: 28px;
-  color: #000;
+  color: rgba(255, 255, 255, 0.65);
 }
 
 .cta-card .btn {
   width: 100%;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.products-cta .btn-secondary {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.products-cta .btn-secondary:hover {
+  border-color: #fecd01;
+  color: #fecd01;
+  background: rgba(254, 205, 1, 0.08);
 }
 
 @media (max-width: 968px) {
@@ -306,8 +334,14 @@ import product11 from "../assets/producto11.png";
     position: static;
   }
 
-  .product-item span {
-    font-size: 1rem;
+  .section-title h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-container {
+    padding: 16px;
   }
 }
 

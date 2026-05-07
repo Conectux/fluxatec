@@ -3,14 +3,17 @@ const industries = [
   {
     icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 008 10.586V5L7 4z",
     name: "Manufactura",
+    desc: "Plantas de producción que requieren aire comprimido confiable y continuo.",
   },
   {
     icon: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4",
     name: "Minería",
+    desc: "Operaciones mineras con requerimientos de alta presión y ambientes exigentes.",
   },
   {
     icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
     name: "Industria en general",
+    desc: "Cualquier sector industrial que dependa de sistemas de aire comprimido eficientes.",
   },
 ];
 
@@ -23,79 +26,65 @@ const professionals = [
   "Diseñadores de redes",
   "Personal administrativo y de mantenimiento",
 ];
+
+const focusTags = [
+  "Eficiencia energética",
+  "Confiabilidad operativa",
+  "Optimización de sistemas",
+  "Repuestos originales",
+  "Calidad del servicio",
+  "Ahorros de energía",
+];
 </script>
 
 <template>
   <section id="publico" class="section target-audience">
     <div class="container">
-      <div class="section-title">
+
+      <div class="audience-header">
+        <span class="section-label-light">¿A quién servimos?</span>
         <h2>Industrias y Profesionales que Atendemos</h2>
-        <p class="section-subtitle">
+        <p class="audience-subtitle">
           Trabajamos con empresas y profesionales de Medellín, Antioquia y Colombia
-          comprometidos con la eficiencia energética y la excelencia operativa
+          comprometidos con la eficiencia energética y la excelencia operativa.
         </p>
       </div>
+
       <div class="audience-content">
+
         <div class="industries-section">
           <h3 class="subsection-title">Sectores Industriales</h3>
           <div class="industries-grid">
-            <div
-              v-for="(industry, index) in industries"
-              :key="index"
-              class="industry-card"
-            >
+            <div v-for="(industry, index) in industries" :key="index" class="industry-card">
               <div class="industry-icon">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    :d="industry.icon"
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="industry.icon" />
                 </svg>
               </div>
-              <h4>{{ industry.name }}</h4>
+              <div class="industry-info">
+                <h4>{{ industry.name }}</h4>
+                <p>{{ industry.desc }}</p>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="professionals-section">
-          <h3 class="subsection-title">Profesionales</h3>
-          <p class="professionals-intro">Dirigido a:</p>
+          <h3 class="subsection-title">Perfiles Profesionales</h3>
           <ul class="professionals-list">
-            <li v-for="(professional, index) in professionals" :key="index">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-              {{ professional }}
+            <li v-for="(p, index) in professionals" :key="index">
+              <span class="pro-check">✓</span>
+              {{ p }}
             </li>
           </ul>
           <div class="focus-areas">
-            <p>Interesados en:</p>
+            <p class="focus-title">Interesados en:</p>
             <div class="focus-tags">
-              <span class="tag">Eficiencia energética</span>
-              <span class="tag">Confiabilidad operativa</span>
-              <span class="tag">Optimización de sistemas</span>
-              <span class="tag">Repuestos originales</span>
-              <span class="tag">Calidad del servicio</span>
-              <span class="tag">Ahorros de energía</span>
+              <span v-for="tag in focusTags" :key="tag" class="tag">{{ tag }}</span>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -103,92 +92,119 @@ const professionals = [
 
 <style scoped>
 .target-audience {
-  background: linear-gradient(
-    to bottom,
-    var(--neutral-light) 0%,
-    var(--white) 100%
-  );
+  background: var(--navy-dark);
 }
 
-.section-subtitle {
-  font-size: 1.125rem;
-  color: var(--text-light);
-  max-width: 700px;
+/* Header */
+.audience-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-label-light {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fecd01;
+  margin-bottom: 12px;
+}
+
+.audience-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.audience-subtitle {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
   margin: 0 auto;
+  line-height: 1.75;
 }
 
+/* Layout */
 .audience-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: 48px;
 }
 
 .subsection-title {
-  font-size: 1.5rem;
-  color: var(--text-dark);
-  margin-bottom: 32px;
-  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fecd01;
+  margin-bottom: 28px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 1.5px;
 }
 
+/* Industries */
 .industries-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .industry-card {
-  background: var(--white);
-  border: 2px solid var(--neutral-light);
-  border-radius: 12px;
-  padding: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 24px;
   display: flex;
-  align-items: center;
-  gap: 24px;
-  transition: all 0.3s ease;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.28s ease;
 }
 
 .industry-card:hover {
-  border-color: var(--primary-blue);
-  transform: translateX(8px);
-  box-shadow: 0 8px 24px rgba(11, 79, 140, 0.15);
+  background: rgba(254, 205, 1, 0.08);
+  border-color: rgba(254, 205, 1, 0.35);
+  transform: translateX(6px);
 }
 
 .industry-icon {
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, #c99700 0%, #ffd84d 100%);
+  width: 52px;
+  height: 52px;
+  background: #fecd01;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  color: #0a1628;
   flex-shrink: 0;
 }
 
 .industry-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
-.industry-card h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-dark);
+.industry-info h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.industry-info p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
   margin: 0;
 }
 
+/* Professionals */
 .professionals-section {
-  background: var(--white);
-  border: 2px solid var(--neutral-light);
-  border-radius: 16px;
-  padding: 40px;
-}
-
-.professionals-intro {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px;
 }
 
 .professionals-list {
@@ -200,107 +216,87 @@ const professionals = [
 .professionals-list li {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 12px;
-  margin-bottom: 12px;
-  font-size: 1.0625rem;
-  color: var(--text-dark);
-  background: var(--neutral-light);
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  gap: 14px;
+  padding: 11px 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: color 0.2s ease;
+}
+
+.professionals-list li:last-child {
+  border-bottom: none;
 }
 
 .professionals-list li:hover {
-  background: var(--primary-blue);
-  color: var(--white);
-  transform: translateX(4px);
+  color: #fecd01;
 }
 
-.professionals-list li:hover svg {
-  color: var(--white);
-}
-
-.professionals-list svg {
-  width: 24px;
-  height: 24px;
-  color: var(--primary-blue);
+.pro-check {
+  width: 22px;
+  height: 22px;
+  background: #fecd01;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #0a1628;
   flex-shrink: 0;
-  transition: color 0.3s ease;
+  line-height: 22px;
+  text-align: center;
 }
 
-.focus-areas {
-  padding-top: 24px;
-  border-top: 2px solid var(--neutral-light);
-}
-
-.focus-areas > p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 16px;
+/* Focus tags */
+.focus-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 14px;
 }
 
 .focus-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
 }
 
 .tag {
   display: inline-block;
-  background: linear-gradient(
-    135deg,
-    var(--accent-orange),
-    var(--accent-yellow)
-  );
-  color: var(--white);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.875rem;
+  background: rgba(254, 205, 1, 0.12);
+  border: 1px solid rgba(254, 205, 1, 0.35);
+  color: #fecd01;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8125rem;
   font-weight: 600;
-  transition: transform 0.3s ease;
+  transition: all 0.2s ease;
+  cursor: default;
 }
 
 .tag:hover {
-  transform: translateY(-2px);
+  background: #fecd01;
+  color: #0a1628;
 }
 
-@media (max-width: 968px) {
+/* Responsive */
+@media (max-width: 900px) {
   .audience-content {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
+  }
+
+  .audience-header h2 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
-  .subsection-title {
-    font-size: 1.25rem;
-  }
-
-  .industry-card {
-    padding: 24px;
-  }
-
-  .industry-icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .industry-icon svg {
-    width: 28px;
-    height: 28px;
-  }
-
-  .industry-card h4 {
-    font-size: 1.125rem;
-  }
-
   .professionals-section {
-    padding: 32px 24px;
-  }
-
-  .professionals-list li {
-    font-size: 1rem;
+    padding: 28px 20px;
   }
 }
 </style>

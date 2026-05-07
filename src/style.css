@@ -2,11 +2,15 @@
   --primary-blue: #0B4F8C;
   --primary-dark: #083A66;
   --primary-light: #1565A8;
-  --accent-orange: #F77F00;
-  --accent-yellow: #FCBF49;
+  --navy-dark: #0A1628;
+  --accent: #FECD01;
+  --accent-dark: #D4AC00;
+  --accent-orange: #FECD01;
+  --accent-yellow: #FECD01;
   --neutral-dark: #1F2937;
   --neutral-gray: #6B7280;
   --neutral-light: #F3F4F6;
+  --section-alt: #F8F9FB;
   --white: #FFFFFF;
   --text-dark: #111827;
   --text-light: #4B5563;
@@ -87,14 +91,15 @@ button, .btn {
 }
 
 .btn-primary {
-  background-color: var(--primary-blue);
-  color: var(--white);
+  background-color: var(--accent);
+  color: #0A1628;
+  font-weight: 700;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(11, 79, 140, 0.3);
+  box-shadow: 0 6px 20px rgba(254, 205, 1, 0.4);
 }
 
 .btn-secondary {
@@ -109,14 +114,26 @@ button, .btn {
 }
 
 .btn-accent {
-  background-color: var(--accent-orange);
-  color: var(--white);
+  background-color: var(--accent);
+  color: #0A1628;
+  font-weight: 700;
 }
 
 .btn-accent:hover {
-  background-color: #D66E00;
+  background-color: var(--accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(247, 127, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(254, 205, 1, 0.4);
+}
+
+/* Etiqueta de sección reutilizable */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
 }
 
 .container {

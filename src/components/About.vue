@@ -3,67 +3,55 @@
 <template>
   <section id="nosotros" class="section about">
     <div class="container">
-      <div class="section-title">
-        <h2>Quiénes Somos</h2>
-      </div>
-      <div class="about-content">
+      <div class="about-grid">
+
         <div class="about-text">
-          <div class="about-logo-fluxa">
+          <span class="section-label">Sobre Nosotros</span>
+          <h2>Quiénes Somos</h2>
+
+          <div class="about-logo-wrap">
             <img
               src="../assets/logo-fluxatec-negro.png"
-              style="
-                max-width: 300px;
-                width: 100%;
-                height: auto;
-                margin-bottom: 50px;
-              "
               alt="Fluxatec Ingeniería – especialistas en aire comprimido industrial Colombia"
+              class="about-logo-img"
             />
           </div>
+
           <p class="about-intro">
             Empresa colombiana con sede en Envigado, Antioquia, especializada en
-            consultoría técnica, diseño e implementación de soluciones en aire
-            comprimido industrial y sistemas neumáticos.
+            consultoría técnica, diseño e implementación de soluciones en
+            aire comprimido industrial y sistemas neumáticos.
           </p>
           <p>
             Somos ingenieros especialistas y
-            <strong
-              >distribuidores autorizados de Kaeser Compresores de
-              Colombia</strong
-            >, marca líder mundial en sistemas de aire comprimido, con presencia
-            en Medellín, Antioquia y el resto del país.
+            <strong>distribuidores autorizados de Kaeser Compresores de Colombia</strong>,
+            marca líder mundial en sistemas de aire comprimido, con presencia en
+            Medellín, Antioquia y el resto del país.
           </p>
           <p>
-            Cada proyecto se desarrolla con consultoría especializada, enfocada
-            en eficiencia energética, confiabilidad operativa y retorno de
-            inversión. Ofrecemos mantenimiento preventivo y correctivo,
-            repuestos Kaeser 100&nbsp;% originales y servicio técnico certificado.
+            Cada proyecto se desarrolla con consultoría especializada, enfocada en
+            eficiencia energética, confiabilidad operativa y retorno de inversión.
+            Ofrecemos mantenimiento preventivo y correctivo, repuestos Kaeser 100&nbsp;%
+            originales y servicio técnico certificado.
           </p>
+
+          <div class="about-chips">
+            <span class="chip">+20 años de experiencia</span>
+            <span class="chip">Distribuidor autorizado Kaeser</span>
+            <span class="chip">Envigado, Antioquia</span>
+          </div>
         </div>
-        <div class="about-logo">
-          <img
-            src="../assets/distribuidor.png"
-            style="max-width: 500px; width: 100%; height: auto"
-            alt="Fluxatec – distribuidor autorizado de Kaeser Compresores de Colombia"
-          />
-          <!-- <div class="logo-placeholder">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-              />
-            </svg>
-            <span>KAESER</span>
-            <span class="authorized">Distribuidor Autorizado</span>
-          </div> -->
+
+        <div class="about-visual">
+          <div class="about-badge-frame">
+            <img
+              src="../assets/distribuidor.png"
+              alt="Fluxatec – distribuidor autorizado de Kaeser Compresores de Colombia"
+              class="about-badge-img"
+            />
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -71,108 +59,124 @@
 
 <style scoped>
 .about {
-  background-color: var(--neutral-light);
+  background-color: var(--section-alt);
 }
 
-.about-content {
+.about-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 72px;
   align-items: center;
 }
 
-.about-text {
-  font-size: 1.125rem;
+/* Texto */
+.about-text h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  line-height: 1.15;
+}
+
+.about-logo-wrap {
+  margin-bottom: 28px;
+}
+
+.about-logo-img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
 }
 
 .about-intro {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: var(--text-dark);
-  margin-bottom: 24px;
-}
-
-.about-text p {
+  line-height: 1.7;
   margin-bottom: 20px;
 }
 
+.about-text p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
 .about-text strong {
-  color: #000;
-  font-weight: 600;
+  color: var(--text-dark);
+  font-weight: 700;
 }
 
-.about-logo {
+/* Chips */
+.about-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.chip {
+  display: inline-block;
+  background: #fecd01;
+  color: #0a1628;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 100px;
+  letter-spacing: 0.2px;
+}
+
+/* Visual */
+.about-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-logo-fluxa {
-  display: flex;
-  align-items: center;
+.about-badge-frame {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px;
+  box-shadow: 0 4px 32px rgba(10, 22, 40, 0.08);
+  border: 2px solid #fecd01;
 }
 
-.logo-placeholder {
+.about-badge-frame::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 26px;
+  border: 1px solid rgba(254, 205, 1, 0.25);
+  pointer-events: none;
+}
+
+.about-badge-img {
+  max-width: 340px;
   width: 100%;
-  max-width: 320px;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, #c99700 0%, #ffd84d 100%);
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  box-shadow: 0 8px 24px rgba(11, 79, 140, 0.2);
-  padding: 32px;
+  height: auto;
+  display: block;
 }
 
-.logo-placeholder svg {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 16px;
-  opacity: 0.9;
-}
-
-.logo-placeholder span {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.logo-placeholder .authorized {
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-top: 8px;
-  opacity: 0.9;
-  letter-spacing: 1px;
-}
-
-@media (max-width: 768px) {
-  .about-content {
+/* Responsive */
+@media (max-width: 900px) {
+  .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
 
-  .about-text {
-    font-size: 1rem;
+  .about-text h2 {
+    font-size: 2rem;
   }
 
-  .about-intro {
-    font-size: 1.125rem;
-  }
-
-  .logo-placeholder {
-    max-width: 260px;
-  }
-
-  .logo-placeholder svg {
-    width: 60px;
-    height: 60px;
-  }
-
-  .logo-placeholder span {
-    font-size: 1.5rem;
+  .about-badge-frame {
+    padding: 24px;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 </style>
