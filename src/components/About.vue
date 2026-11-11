@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WhatsAppButton from "./WhatsAppButton.vue";
+</script>
 
 <template>
   <section id="nosotros" class="section about">
@@ -39,6 +41,10 @@
             <span class="chip">+20 años de experiencia</span>
             <span class="chip">Distribuidor autorizado Kaeser</span>
             <span class="chip">Envigado, Antioquia</span>
+          </div>
+
+          <div class="section-wa-cta section-wa-cta--left">
+            <WhatsAppButton />
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import WhatsAppButton from "./WhatsAppButton.vue";
 const currentYear = new Date().getFullYear();
 
 const footerLinks = {
@@ -80,6 +81,9 @@ const footerLinks = {
                 </a>
               </li>
             </ul>
+            <div class="footer-wa">
+              <WhatsAppButton />
+            </div>
           </div>
         </div>
 

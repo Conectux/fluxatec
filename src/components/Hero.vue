@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import WhatsAppButton from "./WhatsAppButton.vue";
+</script>
 
 <template>
   <section class="hero">
@@ -24,6 +26,7 @@
         </p>
 
         <div class="hero-ctas">
+          <WhatsAppButton />
           <a href="#productos" class="btn hero-btn-primary">Ver portafolio Kaeser</a>
           <a href="#servicios" class="btn hero-btn-outline">
             Servicio técnico
@@ -320,6 +323,7 @@
   .hero-title { font-size: 2.625rem; }
   .hero-subtitle { font-size: 1rem; margin-bottom: 36px; }
   .hero-ctas { flex-direction: column; gap: 12px; margin-bottom: 44px; }
+  .hero-ctas .wa-btn,
   .hero-btn-primary,
   .hero-btn-outline { justify-content: center; width: 100%; }
   .stat { padding-right: 20px; }

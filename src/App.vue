@@ -7,6 +7,8 @@ import Services from './components/Services.vue'
 import TargetAudience from './components/TargetAudience.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
+import WhatsAppButton from './components/WhatsAppButton.vue'
+import QuoteModal from './components/QuoteModal.vue'
 </script>
 
 <template>
@@ -19,6 +21,8 @@ import Footer from './components/Footer.vue'
     <TargetAudience />
     <Contact />
     <Footer />
+    <WhatsAppButton variant="floating" />
+    <QuoteModal />
   </div>
 </template>
 

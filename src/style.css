@@ -192,3 +192,26 @@ button, .btn {
     padding: 0 16px;
   }
 }
+
+/* CTA de WhatsApp al final de secciones */
+.section-wa-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.section-wa-cta--left {
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.footer-wa {
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .section-wa-cta .wa-btn,
+  .footer-wa .wa-btn {
+    width: 100%;
+  }
+}

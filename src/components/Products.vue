@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import WhatsAppButton from "./WhatsAppButton.vue";
 const products = [
   {
     text: "Compresores de tornillo rotativo (3 HP a 650 HP)",
@@ -150,12 +151,11 @@ import product11 from "../assets/producto11.png";
               Solicita nuestro catálogo de aire comprimido con especificaciones
               técnicas detalladas vía WhatsApp
             </p>
-            <a
-              href="#contacto"
-              rel="noopener noreferrer"
-              class="boton-whatsapp btn btn-primary"
-              >Solicitar catálogo o cotización</a
-            >
+            <WhatsAppButton
+              block
+              class="wa-catalog"
+              project-type="Catálogo de productos"
+            />
             <a
               href="https://docs.google.com/forms/d/10yTmnfaJWhcFZ_wCaH_pnm5fS_Gq3QMUwxMMEDwXuXE/edit"
               target="blank"
@@ -303,6 +303,10 @@ import product11 from "../assets/producto11.png";
   line-height: 1.65;
   margin-bottom: 28px;
   color: rgba(255, 255, 255, 0.65);
+}
+
+.wa-catalog {
+  margin-bottom: 12px;
 }
 
 .cta-card .btn {
